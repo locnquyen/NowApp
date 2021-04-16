@@ -49,9 +49,18 @@ flutter:
   assets:
     - dish.png
     - dish_2.png
+    - icon_home.png
     - assets/icons/facebook-2.svg
     - assets/icons/google-icon.svg
     - assets/icons/twitter.svg
+    #product
+    - assets/foods/ic_black_coffee.png
+    - assets/images/ic_circlek.png
+    - assets/images/ic_ministop.png
+    - assets/images/ic_ministop.png
+    - assets/images/ic_vinmart.jpg
+    - assets/images/ic_seveneleven.png
+    - assets/images/ic_highland.jpeg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

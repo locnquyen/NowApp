@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutternguyencongloc/homepage/homapage.dart';
 import 'package:flutternguyencongloc/signup/signuppage.dart';
 
 class SignInForm extends StatefulWidget {
@@ -67,6 +68,9 @@ class _SignInFormState extends State<SignInForm> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       child: RaisedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, HomePage.routeName);
+                        },
                         color: Colors.blue,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         child:
