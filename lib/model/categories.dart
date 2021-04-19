@@ -12,13 +12,13 @@ class Categories {
       Categories(
           id: 1, title: "HighLand", image: "assets/images/ic_highland.jpeg"),
       Categories(
-          id: 2, title: "HighLand", image: "assets/images/ic_circlek.png"),
+          id: 2, title: "CirceK", image: "assets/images/ic_circlek.png"),
       Categories(
-          id: 3, title: "HighLand", image: "assets/images/ic_ministop.png"),
+          id: 3, title: "MiniStop", image: "assets/images/ic_ministop.png"),
       Categories(
-          id: 4, title: "HighLand", image: "assets/images/ic_seveneleven.png"),
+          id: 4, title: "SeveneLeven", image: "assets/images/ic_seveneleven.png"),
       Categories(
-          id: 5, title: "HighLand", image: "assets/images/ic_vinmart.jpg"),
+          id: 5, title: "VinMart", image: "assets/images/ic_vinmart.jpg"),
     ];
     return data;
   }

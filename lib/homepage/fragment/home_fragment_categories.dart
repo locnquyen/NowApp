@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutternguyencongloc/category/categorypage.dart';
+import 'package:flutternguyencongloc/detail/productpage.dart';
 import 'package:flutternguyencongloc/model/categories.dart';
 
 class CategoriesStore extends StatelessWidget {
@@ -39,8 +41,6 @@ class CategoriesStore extends StatelessWidget {
 // ignore: must_be_immutable
 class CategoriesItem extends StatelessWidget {
   Categories category;
-
-
   CategoriesItem({this.category});
 
   @override
@@ -49,7 +49,14 @@ class CategoriesItem extends StatelessWidget {
       width: 150,
       height: 150,
       padding: EdgeInsets.all(5),
-      child: Image.asset(category.image),
+      child: GestureDetector(
+        onTap: (){
+          Navigator.pushNamed(context, CategoryPage.routeName,
+          arguments: this.category.id);
+        },
+        child: Image.asset(category.image),
+      )
+      //
     );
   }
 }

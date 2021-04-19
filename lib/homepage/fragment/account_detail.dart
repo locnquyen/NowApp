@@ -27,7 +27,7 @@ class _AccountDetailState extends State<AccountDetail> {
             SizedBox(height: 30,),
             phoneNumberTextFormField(),
             SizedBox(height: 30,),
-            SizedBox(
+            /*SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width,
               child: RaisedButton(
@@ -37,7 +37,7 @@ class _AccountDetailState extends State<AccountDetail> {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 color: Colors.green,
                 child: Text("Continue", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),),),
-            ),
+            ),*/
             SizedBox(height: 30,),
             Container(
               width: MediaQuery.of(context).size.width,

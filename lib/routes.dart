@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutternguyencongloc/category/categorypage.dart';
 import 'package:flutternguyencongloc/homepage/homapage.dart';
 
 import 'cart/cartpage.dart';
@@ -16,4 +17,5 @@ final Map<String, WidgetBuilder> routes = {
   HomePage.routeName: (context) => HomePage(),
   ProductPage.routeName : (context) => ProductPage(),
   CartPage.routeName: (context) => CartPage(),
+  CategoryPage.routeName: (context) => CategoryPage()
 };

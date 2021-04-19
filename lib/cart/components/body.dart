@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternguyencongloc/cart/components/checkoutcart.dart';
 import 'package:flutternguyencongloc/model/cart.dart';
 import 'package:flutternguyencongloc/model/products.dart';
 
 class Body extends StatefulWidget {
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -11,7 +13,6 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   List<Products> cartdetails = Cart().getCart();
   double sum =0.0;
-
   @override
   void initState() {
     // TODO: implement initState
