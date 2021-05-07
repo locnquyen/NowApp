@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutternguyencongloc/cart/components/checkoutcart.dart';
+import 'package:flutternguyencongloc/detail/productpage.dart';
 import 'package:flutternguyencongloc/model/products.dart';
+import 'package:flutternguyencongloc/model/utilities.dart';
 
 // ignore: must_be_immutable
 class CategoryForm extends StatelessWidget {
@@ -24,6 +26,11 @@ class CategoryForm extends StatelessWidget {
 
           itemBuilder: (context, index){
             return GestureDetector(
+              onTap: (){
+                Utilities.data.add(productsList[index]);
+                Navigator.pushNamed(context, ProductPage.routeName,
+                    arguments: ProductDetailsArguments(product: productsList[index]));
+              },
               child: Column(
                 children: [
                   Image.asset(productsList[index].image, fit: BoxFit.fill,),

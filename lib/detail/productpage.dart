@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutternguyencongloc/homepage/homapage.dart';
 import 'package:flutternguyencongloc/model/products.dart';
 
 import 'components/body.dart';
@@ -18,7 +19,8 @@ class ProductPage extends StatelessWidget {
 
         leading: GestureDetector(
           onTap: (){
-            Navigator.pop(context);
+            //Navigator.pop(context);
+            Navigator.pushReplacementNamed(context, HomePage.routeName);
           },
           child: Icon(Icons.arrow_back_ios),
         ),
