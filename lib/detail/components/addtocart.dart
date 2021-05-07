@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutternguyencongloc/model/cart.dart';
 import 'package:flutternguyencongloc/model/products.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 // ignore: must_be_immutable
 class AddProductToCart extends StatefulWidget {
@@ -33,7 +34,7 @@ class _AddProductToCartState extends State<AddProductToCart> {
           Cart cart = Cart();
           cart.addProductToCart(widget.product);
           print(cart.getCart().length.toString());
-          /*Fluttertoast.showToast(
+          Fluttertoast.showToast(
               msg: "Add to cart",
               toastLength: Toast.LENGTH_SHORT,
               gravity: ToastGravity.BOTTOM,
@@ -41,7 +42,7 @@ class _AddProductToCartState extends State<AddProductToCart> {
               backgroundColor: Colors.red,
               textColor: Colors.white,
               fontSize: 16.0
-          );*/
+          );
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         color: Colors.green,

@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternguyencongloc/cart/cartpage.dart';
 import 'package:flutternguyencongloc/model/cart.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 // ignore: must_be_immutable
 class HomeHeader extends StatelessWidget {
@@ -30,12 +31,17 @@ class HomeHeader extends StatelessWidget {
             child: IconButton(
               icon: Icon(Icons.shopping_cart),
               onPressed: () {
-                final result = Navigator.pushNamed(context, CartPage.routeName);
-                result.then((value) {
-                  setState(){
-                    total = Cart.cart.length;
-                  }
-                });
+                if(total == 0){
+                  Fluttertoast.showToast(msg: "No product in Cart");
+                }
+                else{
+                  final result = Navigator.pushNamed(context, CartPage.routeName);
+                  result.then((value) {
+                    setState(){
+                      total = Cart.cart.length;
+                    }
+                  });
+                }
               },
             ),
           ),

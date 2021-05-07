@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternguyencongloc/cart/components/checkoutcart.dart';
+import 'package:flutternguyencongloc/homepage/homapage.dart';
 import 'package:flutternguyencongloc/model/cart.dart';
 import 'package:flutternguyencongloc/model/products.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body extends StatefulWidget {
 
@@ -13,6 +15,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   List<Products> cartdetails = Cart().getCart();
   double sum =0.0;
+  int total;
   @override
   void initState() {
     // TODO: implement initState
@@ -40,6 +43,11 @@ class _BodyState extends State<Body> {
                         onTap: (){
                           setState(() {
                             cartdetails.removeAt(index);
+                            total = Cart.cart.length;
+                            if(total == 0){
+                              Navigator.pushReplacementNamed(context, HomePage.routeName);
+                              Fluttertoast.showToast(msg: "No product in your cart");
+                            }
                             sum = 0.0;
                             cartdetails.forEach((product) { sum = sum + product.price; });
                           });
